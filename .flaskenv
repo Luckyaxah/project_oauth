@@ -1,0 +1,2 @@
+FLASK_APP=anotherme
+FLASK_ENV=development
