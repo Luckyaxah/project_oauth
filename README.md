@@ -1,3 +1,0 @@
-# Dir
-
-## text segmentation

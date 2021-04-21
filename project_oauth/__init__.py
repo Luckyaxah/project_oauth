@@ -1,10 +1,10 @@
 import os
 import click
 from flask import Flask
-from anotherme.apis.v1 import api_v1
-from anotherme.settings import config, basedir
-from anotherme.extensions import db, login_manager, csrf
-from anotherme.blueprints.auth import auth_bp
+from project_oauth.apis.v1 import api_v1
+from project_oauth.settings import config, basedir
+from project_oauth.extensions import db, login_manager, csrf
+from project_oauth.blueprints.auth import auth_bp
 
 
 
@@ -12,7 +12,7 @@ def create_app(config_name=None):
     if config_name is None:
         config_name = os.getenv('FLASK_CONFIG', 'development')
 
-    app = Flask('anotherme')
+    app = Flask('project_oauth')
     app.config.from_object(config[config_name])
 
     register_extensions(app)

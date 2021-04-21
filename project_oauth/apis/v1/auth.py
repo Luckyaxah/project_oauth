@@ -1,7 +1,7 @@
 from flask import g, current_app, request
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer, BadSignature, SignatureExpired
-from anotherme.apis.v1.errors import api_abort, invalid_token, token_missing
-from anotherme.models import User
+from project_oauth.apis.v1.errors import api_abort, invalid_token, token_missing
+from project_oauth.models import User
 
 from functools import wraps
 

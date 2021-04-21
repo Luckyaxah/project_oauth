@@ -2,8 +2,8 @@ from faker import Faker
 from flask import render_template, redirect, url_for, Blueprint, request, jsonify
 from flask_login import login_user, logout_user, current_user
 
-from anotherme.extensions import db
-from anotherme.models import User
+from project_oauth.extensions import db
+from project_oauth.models import User
 
 auth_bp = Blueprint('auth', __name__)
 fake = Faker()

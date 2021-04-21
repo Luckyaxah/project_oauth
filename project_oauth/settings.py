@@ -5,7 +5,7 @@ basedir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 class BaseConfig:
 
-    SERVER_NAME = 'anotherme.dev:5000'  # enable subdomain support
+    SERVER_NAME = 'project_oauth.dev:5000'  # enable subdomain support
     SECRET_KEY = os.getenv('SECRET_KEY', 'a secret string')
 
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'sqlite:///' + os.path.join(basedir, 'data.db'))

@@ -1,2 +1,2 @@
-FLASK_APP=anotherme
+FLASK_APP=project_oauth
 FLASK_ENV=development

@@ -1,9 +1,9 @@
 from flask import jsonify, request
 from flask.views import MethodView
 
-from anotherme.apis.v1 import api_v1
-from anotherme.apis.v1.auth import generate_token
-from anotherme.models import User
+from project_oauth.apis.v1 import api_v1
+from project_oauth.apis.v1.auth import generate_token
+from project_oauth.models import User
 
 
 
@@ -15,13 +15,13 @@ class IndexAPI(MethodView):
     def get(self):
         return jsonify({
             "api_version": "1.0",
-            "api_base_url": "http://anotherme.com/api/v1",
-            "current_user_url": "http://anotherme.com/api/v1/user",
-            "authentication_url": "http://anotherme.com/api/v1/token",
-            "item_url": "http://anotherme.com/api/v1/items/{item_id }",
-            "current_user_items_url": "http://anotherme.com/api/v1/user/items{?page,per_page}",
-            "current_user_active_items_url": "http://anotherme.com/api/v1/user/items/active{?page,per_page}",
-            "current_user_completed_items_url": "http://anotherme.com/api/v1/user/items/completed{?page,per_page}",
+            "api_base_url": "http://project_oauth.com/api/v1",
+            "current_user_url": "http://project_oauth.com/api/v1/user",
+            "authentication_url": "http://project_oauth.com/api/v1/token",
+            "item_url": "http://project_oauth.com/api/v1/items/{item_id }",
+            "current_user_items_url": "http://project_oauth.com/api/v1/user/items{?page,per_page}",
+            "current_user_active_items_url": "http://project_oauth.com/api/v1/user/items/active{?page,per_page}",
+            "current_user_completed_items_url": "http://project_oauth.com/api/v1/user/items/completed{?page,per_page}",
         })
 
 class AuthTokenAPI(MethodView):
